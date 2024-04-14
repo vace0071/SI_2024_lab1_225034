@@ -1,0 +1,27 @@
+vodenje na dokumentacija za labs SI 
+1. go kreirav git profilot so username:vace0071
+2.Imeto na glavnata granka e promeneto vo master.
+3.Mojot odalecen repozitorijum na github e SI_2024_lab1_225034
+4.mkdir SI_2024_lab1_225034 go napraviv direktoriumot vo koj ke rabotam cd SI-2024... i vo nego pravite git init za da go inizijalizirame git vo direktorium
+5.git remote add origin git@github.com:vace0071/SI_2024_lab1_225034 so ovaa komanda go povrzavme lokaliot i odaleceniot repozitorium
+6.go sredivme README.md i sega pravime  $git add README.md  $git commit -m "initial commit" tuka pravime commit na noviot direktorium
+7.gi simnumae linkovite gi prenesuvame vo nasiot direktorium  $git add . (koristam tocka poradi pobrza rabota tocka oznacuva site filovi koi ne se dodadeni da gi dodade)  $git commit -m "Add starter code"
+8.$git push --set-upstream origin master so ovaa gi spojuvame lokaliot i odaleceniot repo
+9. za da sozdademe 2 novi granki koristime $branch bug1 i $branch bug2
+10.$git checkout bug1   so ovaa komanda se prefrluvame na grankata bug1
+11.go popravame bagot potoa pravime $git add SILab1_1.java i $git commit -m "Fix wrong condition in filter OddLengthStrings"
+12.$git checkout bug2 za da se prefrlime na grankata bug2.
+13.$git add SILab1_2.java i $git commit -m "Fix wrong condition in makeBigStringFrom"
+14.$git checkout bug1
+15.$git add SILab1Main.java i $git commit -m "Call method filterOddLengthStrings in main class"
+16.$git checkout bug2
+17.$git add SILab1Main.java i $git commit -m "Call method makeBigStringFrom in main class"
+18.$git push --set-upstream origin bug2  $git checkout bug1  $git push --set-upstream origin bug1
+19.$git checkout master
+20.$git merge bug1 se spojuvaat bug1 i master grankite ne javuva problem spojuvanjeto e preku fast-forward
+21.$git push 
+22.$git checkout bug2
+23.$git rebase master se javuva problem poradi toa sto vo lab1Main.java dodadovme na ista linija 2 razlicni koda sega mora manuelno da gi sredime treba da birame dali ke gi izbrisheme ke ostavime 1 od dvata ili i dvete jas gi ostaviv i dvete komandi edna po druga sega pravime $git add SILab1Main.java pa $git rebase --continue
+24.$git checkout master
+25.$git merge bug2 se spojuvaat grankite preku fast-forward
+26.$git push dodeka sme vo master se izvrshuva $git checkout bug2 $git push --force se izvrshuva a grankata bug1 e vekje up-to-date
